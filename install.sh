@@ -21,7 +21,7 @@ read -r -p "Enter node moniker: " NODE_MONIKER
 CHAIN_ID="mocha"
 CHAIN_DENOM="utia"
 BINARY_NAME="celestia-appd"
-BINARY_VERSION_TAG="v0.11.0"
+BINARY_VERSION_TAG="v0.11.1"
 CHEAT_SHEET="https://nodejumper.io/mocha-testnet/cheat-sheet"
 
 printLine
@@ -40,9 +40,9 @@ cd $HOME || return
 rm -rf celestia-app
 git clone https://github.com/celestiaorg/celestia-app.git
 cd celestia-app || return
-git checkout v0.11.0
+git checkout v0.11.1
 make install
-celestia-appd version # 0.11.0
+celestia-appd version # 0.11.
 
 celestia-appd config keyring-backend test
 celestia-appd config chain-id $CHAIN_ID
